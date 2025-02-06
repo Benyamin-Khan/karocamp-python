@@ -4,29 +4,26 @@ def binary_search(arr, target):
     while left <= right:
         mid = (left + right) // 2
         if arr[mid] == target:
-            return mid  # Element found
+            return mid
         elif arr[mid] < target:
             left = mid + 1
         else:
             right = mid - 1
-    return -1  # Element not found
+    return -1
 
 
-# Example for Binary Search:
 arr = [1, 3, 5, 7, 9, 11]
 target = 7
 result = binary_search(arr, target)
 print(f"Index of {target}: {result}")
 
 
-# Recursive Fibonacci Algorithm
 def fibonacci_recursive(n):
     if n <= 1:
         return n
     return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
 
 
-# Example for Recursive Fibonacci:
 n = 10
 print("Fibonacci Sequence (Recursive):")
 for i in range(n):
@@ -34,7 +31,6 @@ for i in range(n):
 print()
 
 
-# Iterative Fibonacci Algorithm
 def fibonacci_iterative(n):
     fib_sequence = [0, 1]
     for i in range(2, n):
@@ -42,7 +38,6 @@ def fibonacci_iterative(n):
     return fib_sequence
 
 
-# Example for Iterative Fibonacci:
 n = 10
 print("Fibonacci Sequence (Iterative):")
 print(fibonacci_iterative(n))
